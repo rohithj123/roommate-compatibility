@@ -1,75 +1,36 @@
-# Roommate Compatibility Calculator
-
-## Project Overview
-
-This project was developed for the CSCE 490 Research Milestone at the University of South Carolina. It serves as an individual prototype for our team's capstone project, **MoveIn Match**, a platform designed to help college students find compatible roommates based on their lifestyles and personal preferences.
-
-The goal of this application is to explore the technologies we plan to use for our capstone project while developing a functional roommate matching system.
-
-## Features
-
-- **Lifestyle Questionnaire:** Users can select their sleep schedule, cleanliness preferences, and monthly housing budget.
-- **Sample Roommate Profiles:** The application contains fictional roommate profiles with different lifestyle preferences.
-- **Compatibility Scoring:** A matching algorithm compares user preferences against each roommate profile and calculates a compatibility percentage.
-- **Ranked Matches:** Potential roommates are ranked based on their compatibility scores.
-- **Match Breakdown:** Users can view how their preferences compare with each roommate across different categories.
-- **Interactive Interface:** Users can change their preferences and recalculate results.
-
-## Technologies Used
-
-- **Next.js:** Framework used to structure and run the application.
-- **React:** Handles interactive components and user input.
-- **TypeScript:** Provides type safety and supports the compatibility scoring logic.
-- **Tailwind CSS:** Used for styling and responsive layouts.
-- **Node.js and npm:** Used to manage dependencies and run the development environment.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### Prerequisites
+First, run the development server:
 
-Make sure Node.js and npm are installed.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### Installation
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-1. Clone the repository:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-   `git clone https://github.com/rohithj123/roommate-compatibility.git`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-2. Navigate into the project directory:
+## Learn More
 
-   `cd roommate-compatibility`
+To learn more about Next.js, take a look at the following resources:
 
-3. Install dependencies:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   `npm install`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-4. Start the development server:
+## Deploy on Vercel
 
-   `npm run dev`
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-5. Open your browser and navigate to:
-
-   `http://localhost:3000`
-
-## How the Compatibility System Works
-
-The application compares a user's lifestyle preferences against a set of predefined roommate profiles.
-
-Each category, including sleep schedule, cleanliness, and housing budget, contributes to an overall compatibility score. The matching logic considers how closely the preferences align and calculates a percentage representing the compatibility between two roommates.
-
-The application then ranks potential roommates based on their scores, allowing users to identify which profiles best match their preferences.
-
-## Research Milestone
-
-This application was created to gain hands-on experience with Next.js, React, TypeScript, and Tailwind CSS before beginning full development of our team's capstone project.
-
-Through this project, I practiced building interactive components, managing application state, processing user input, organizing TypeScript code, and implementing a basic matching algorithm.
-
-The prototype demonstrates some of the core functionality that could eventually be incorporated into the full MoveIn Match platform.
-
-## Author
-
-Rohith Joseph  
-University of South Carolina  
-CSCE 490 — Capstone Computing Project  
-Fall 2026
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
