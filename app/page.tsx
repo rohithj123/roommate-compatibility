@@ -2,11 +2,16 @@
 "use client";
 
 import { useState } from "react";
+import type {
+  CleanlinessLevel,
+  HousingBudget,
+  SleepSchedule,
+} from "../lib/compatibility";
 
 export default function Home() {
-  const [sleep, setSleep] = useState("night");
-  const [cleanliness, setCleanliness] = useState("3");
-  const [budget, setBudget] = useState("800");
+  const [sleep, setSleep] = useState<SleepSchedule>("night");
+  const [cleanliness, setCleanliness] = useState<CleanlinessLevel>(3);
+  const [budget, setBudget] = useState<HousingBudget>(800);
   const [score, setScore] = useState<number | null>(null);
 
   function calculateMatch() {
@@ -14,8 +19,8 @@ export default function Home() {
 
     // Compare answers against a sample roommate
     if (sleep === "night") points += 30;
-    if (cleanliness === "3") points += 35;
-    if (budget === "800") points += 35;
+    if (cleanliness === 3) points += 35;
+    if (budget === 800) points += 35;
 
     setScore(points);
   }
@@ -39,7 +44,7 @@ export default function Home() {
             className="w-full rounded border p-3"
             value={sleep}
             onChange={(e) => {
-              setSleep(e.target.value);
+              setSleep(e.target.value as SleepSchedule);
               setScore(null);
             }}
           >
@@ -56,7 +61,7 @@ export default function Home() {
             className="w-full rounded border p-3"
             value={cleanliness}
             onChange={(e) => {
-              setCleanliness(e.target.value);
+              setCleanliness(Number(e.target.value) as CleanlinessLevel);
               setScore(null);
             }}
           >
@@ -75,7 +80,7 @@ export default function Home() {
             className="w-full rounded border p-3"
             value={budget}
             onChange={(e) => {
-              setBudget(e.target.value);
+              setBudget(Number(e.target.value) as HousingBudget);
               setScore(null);
             }}
           >
